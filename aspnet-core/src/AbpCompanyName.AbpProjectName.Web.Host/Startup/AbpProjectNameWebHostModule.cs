@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using AbpCompanyName.AbpProjectName.Configuration;
+using AbpCompanyName.AbpProjectName.IGenerics;
 
 namespace AbpCompanyName.AbpProjectName.Web.Host.Startup
 {
@@ -22,6 +23,8 @@ namespace AbpCompanyName.AbpProjectName.Web.Host.Startup
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(typeof(AbpProjectNameWebHostModule).GetAssembly());
+
+            var resolve = IocManager.IocContainer.Resolve<IQueryService<SomeEntitiesDto.SomeEntityDto>>(); //Here is test of registration
         }
     }
 }

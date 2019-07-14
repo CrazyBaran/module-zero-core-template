@@ -2,6 +2,8 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using AbpCompanyName.AbpProjectName.Authorization;
+using AbpCompanyName.AbpProjectName.IGenerics;
+using Castle.MicroKernel.Registration;
 
 namespace AbpCompanyName.AbpProjectName
 {
@@ -25,6 +27,9 @@ namespace AbpCompanyName.AbpProjectName
                 // Scan the assembly for classes which inherit from AutoMapper.Profile
                 cfg => cfg.AddProfiles(thisAssembly)
             );
+
+            IocManager.IocContainer.Register(Classes.FromAssembly(thisAssembly).BasedOn(typeof(IQueryService<>)) //Here is my registration
+                                            .WithService.Base());
         }
     }
 }
