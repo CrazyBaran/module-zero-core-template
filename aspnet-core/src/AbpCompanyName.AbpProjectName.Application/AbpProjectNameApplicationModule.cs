@@ -28,7 +28,7 @@ namespace AbpCompanyName.AbpProjectName
                 cfg => cfg.AddProfiles(thisAssembly)
             );
 
-            IocManager.IocContainer.Register(Classes.FromAssembly(thisAssembly).BasedOn(typeof(IQueryService<>)) //Here is my registration
+            IocManager.IocContainer.Register(Classes.FromAssembly(thisAssembly).BasedOn(typeof(IQueryService<>)) //Here is my TEST registration
                                             .WithService.Base());
         }
     }

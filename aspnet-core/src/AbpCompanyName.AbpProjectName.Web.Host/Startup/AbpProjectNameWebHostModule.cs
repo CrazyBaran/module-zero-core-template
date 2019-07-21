@@ -24,7 +24,7 @@ namespace AbpCompanyName.AbpProjectName.Web.Host.Startup
         {
             IocManager.RegisterAssemblyByConvention(typeof(AbpProjectNameWebHostModule).GetAssembly());
 
-            var resolve = IocManager.IocContainer.Resolve<IQueryService<SomeEntitiesDto.SomeEntityDto>>(); //Here is test of registration
+            var resolve = IocManager.IocContainer.Resolve<IQueryService<SomeEntitiesDto.SomeTypeDto>>(); //Here is test of registration
         }
     }
 }

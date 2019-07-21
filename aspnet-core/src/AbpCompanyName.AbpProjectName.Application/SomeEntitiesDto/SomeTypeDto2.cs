@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AbpCompanyName.AbpProjectName.SomeEntitiesDto
 {
-    public class SomeEntityDto : EntityDto<string>
+    public class SomeTypeDto2 : EntityDto<string>
     {
     }
 }

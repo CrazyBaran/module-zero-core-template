@@ -11,7 +11,7 @@ namespace AbpCompanyName.AbpProjectName.Web.Host.Controllers
 {
     public class SomeEntity2Controller : AbpController
     {
-        public SomeEntity2Controller(IQueryService<SomeEntityDto2> queryService)
+        public SomeEntity2Controller(IQueryService<SomeTypeDto2> queryService)
         {
 
         }

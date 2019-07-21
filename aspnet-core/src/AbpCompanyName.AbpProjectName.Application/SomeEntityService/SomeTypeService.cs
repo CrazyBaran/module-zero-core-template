@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace AbpCompanyName.AbpProjectName.SomeEntityService
 {
-    public class SomeEntity2Service : Generics.QueryService<SomeEntityDto2, SomeEntity2>
+    public class SomeTypeService : Generics.QueryService<SomeTypeDto, SomeType>
     {
-        public SomeEntity2Service(IRepository<SomeEntity2> repository) : base(repository)
+        public SomeTypeService(IRepository<SomeType> repository) : base(repository)
         {
         }
     }
